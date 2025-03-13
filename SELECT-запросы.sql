@@ -23,7 +23,7 @@ where name NOT LIKE '% %';
 -- Название треков, которые содержат слово «мой» или «my».
 select name
 from tracks
-where name like '%my%';
+where name ~* '\mmy\M' OR name ~* '\mмой\M';;
 
 
 -- Задание 3
@@ -48,9 +48,12 @@ group by a.name
 -- Все исполнители, которые не выпустили альбомы в 2020 году.
 SELECT a.name AS artist_name
 FROM artists a
-LEFT JOIN artist_albums aa ON a.id = aa.artist_id
-LEFT JOIN albums al ON aa.album_id = al.id AND al.release_year = 2020
-WHERE al.id IS NULL;
+WHERE a.id NOT IN (
+    SELECT aa.artist_id
+    FROM artist_albums aa
+    JOIN albums al ON aa.album_id = al.id
+    WHERE al.release_year = 2020
+);
 
 -- Названия сборников, в которых присутствует конкретный исполнитель (Пётр Лещенко).
 SELECT DISTINCT c.title AS collection_title

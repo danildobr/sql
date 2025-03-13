@@ -1,20 +1,20 @@
 -- INSERT-запросы (задание 1)
 insert into genres (name)
 values('Поп-жанр'),
-      ('R&B'),
+	('R&B'),
       ('Кантри'),
       ('Русский шансон');
 
 insert into artists (name)
 values('Пётр Лещенко'), 
-      ('Билл Монро'), 
-      ('Alicia'), 
+	('Билл Монро'), 
+	('Alicia'), 
       ('Мартин Гаррикс'); 
 
 insert into albums (name, release_year)
 values('Всё, что было', 1988),
-      ('Блюз Собачьего Дома', 2001),
-      ('Animals', 2019),
+	('Блюз Собачьего Дома', 2001),
+	('Animals', 2019),
       ('New Day', 1997);
 
 insert  into tracks (name, duration, album_id )
@@ -23,7 +23,12 @@ values('Осенний мираж', 250, 1),
 	('Блюз Скалистой Дороги', 150, 2),
 	('Russian Roulette', 200, 4),
 	('Haegeum my', 350, 3),
-	('Running Wild', 210, 3);
+      ('my own', 340, 4),
+      ('own my', 350, 3),
+      ('my', 300, 1),
+      ('myself', 320, 2),
+      ('by myself', 250, 3),
+      ('Running Wild', 100, 4);
 
 insert into genre_artists (genre_id, artist_id)
 values(1, 1),
