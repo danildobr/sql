@@ -1,20 +1,20 @@
 -- INSERT-запросы (задание 1)
 insert into genres (name)
 values('Поп-жанр'),
-	('R&B'),
+      ('R&B'),
       ('Кантри'),
       ('Русский шансон');
 
 insert into artists (name)
 values('Пётр Лещенко'), 
-	('Билл Монро'), 
-	('Alicia'), 
+      ('Билл Монро'), 
+      ('Alicia'), 
       ('Мартин Гаррикс'); 
 
 insert into albums (name, release_year)
 values('Всё, что было', 1988),
-	('Блюз Собачьего Дома', 2001),
-	('Animals', 2019),
+      ('Блюз Собачьего Дома', 2001),
+      ('Animals', 2019),
       ('New Day', 1997);
 
 insert  into tracks (name, duration, album_id )
