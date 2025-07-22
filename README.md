@@ -7,3 +7,6 @@
   
 Программа для управления клиентами на Python, при помощи библиотеки psycopg2
 - [Управление клиентами](https://github.com/danildobr/sql/blob/main/SQL%20из%20Python.py)
+
+Python и БД. ORM
+- [работа с библиотекой SQLAlchemy](https://github.com/danildobr/sql/blob/main/python-ORM.py)
